@@ -1,0 +1,13 @@
+Jean Courau (211538576)
+211538576@stu.ukzn.ac.za or jeancourau6666@gmail.com
+
+My research project entails the further development and implementation
+of quantum inspired evolutionary algorithms for large scale optomization 
+problems.
+
+I would, of course, like to have this course act as the impetus to gaining
+a fundmental and, hopefully, thorough understanding of scientific computing in general.
+I would also like to gain enough skill to be able to solve a number of 
+mathematics problems, which in doing so, will allow me to simulate and solve a plethora
+of physics related problems.
+
