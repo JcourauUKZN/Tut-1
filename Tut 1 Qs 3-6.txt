@@ -1,0 +1,72 @@
+Question 3:
+
+import numpy as np
+x0=0
+x1=np.pi/2
+mydelts=[x1/10,x1/30,x1/100,x1/300,x1/1000]      # width=x1-x0/num.rectangles
+for dx in mydelts:
+    x=np.arange(x0,x1,dx)
+    y=np.cos(x)
+    tot=y.sum()*dx
+    err=np.abs(tot-1.0);
+    print('the integral with dx= ' + repr(dx) +' is ' + repr(tot) + ' and the error is ' + repr(err))
+
+
+Question 4:
+
+import numpy as np
+x=np.arange(0,20,1)
+oddnums=x[1:-1:2]
+evennums=x[2:-1:2]
+print(oddnums)
+print(evennums)
+
+Question 5 and 6: Required assistance with the first part
+
+import matplotlib.pyplot as plt
+import numpy as np
+spacing=[31,101,301,1001]
+points = [11, 31, 101, 301, 1001, 3001, 10001, 30001, 100001]
+points = np.array(points)
+for sp in spacing:
+    x=np.linspace(0,(np.pi/2),sp)
+    dx = np.pi / 2 / (sp)*2
+    evens = x[2:-1:2]
+    odds = x[1:-1:2]
+    tot = np.sum(evens) / 3 + np.sum(odds) * 2 / 3 + x[0] / 6 + x[-1] / 6
+    integ= tot * dx
+    simperr=np.abs(integ-1.0)
+    print('the simpson integral is ' +repr(integ)+ '  and the error is '+ repr(simperr))
+
+
+    simps_err = np.zeros(points.size)
+        for l in range(points.size):
+        n = points
+        simps_err[l] = np.abs(simperr)
+        plt.plot(points, simps_err)
+    axis = plt.gca()
+
+    axis.set_yscale('log')
+    axis.set_xscale('log')
+    plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
